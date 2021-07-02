@@ -12,7 +12,6 @@ var clean = require('gulp-clean');
 var htmlmin = require('gulp-html-minifier');
 var cache = require('gulp-cache');
 var gulpsync = require('gulp-sync')(gulp);
-var zip = require('gulp-zip');
 var concat = require('gulp-concat');
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
@@ -100,17 +99,6 @@ gulp.task('copyhtml', function() {
 		.pipe(gulp.dest('dist'));
 });
 
-
-// create archive for build (map "dist")
-gulp.task('zip', () =>
-	gulp.src('dist/**/*')
-	.pipe(zip('build.zip'))
-	.pipe(size({
-		showFiles: true
-	}))
-	.pipe(gulp.dest('./'))
-);
-
 //
 gulp.task('default', ['stylus', 'pug', 'browser-sync'],
 	function() {
@@ -135,6 +123,4 @@ gulp.task('compile', gulpsync.sync(['stylus', 'pug']));
 
 
 // build project in "dist map"
-gulp.task('build', gulpsync.sync(['compile', 'clean', 'copyhtml', 'copyimages',
-	'copyfonts', 'zip'
-]));
+gulp.task('build', gulpsync.sync(['compile', 'clean', 'copyhtml', 'copyimages','copyfonts']));
