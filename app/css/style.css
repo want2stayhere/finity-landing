@@ -967,6 +967,7 @@ h2 {
   text-align: center;
   -webkit-box-shadow: inset 0px -98px 114px 0px rgba(29,41,63,0.04);
           box-shadow: inset 0px -98px 114px 0px rgba(29,41,63,0.04);
+  overflow: hidden;
 }
 .top-main h1 {
   margin: 0 0 10px 0;
