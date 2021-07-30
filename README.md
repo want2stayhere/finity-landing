@@ -1,5 +1,6 @@
 # Finity-landing
-Project on Gulp with Pug, Stylus, autoprefixer, browser-sync and other
+Project on Gulp with Pug, Stylus, autoprefixer, browser-sync and other.
+You can see it here: https://want2stayhere.github.io/finity-landing/
 
 Установка
 -------
