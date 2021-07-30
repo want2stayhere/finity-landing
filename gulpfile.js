@@ -62,9 +62,9 @@ gulp.task('browser-sync', function() {
 	})
 });
 
-//delete "dist" map
+//delete "docs" map
 gulp.task('clean', function() {
-	return gulp.src('dist', {
+	return gulp.src('docs', {
 			read: false
 		})
 		.pipe(clean());
@@ -72,20 +72,20 @@ gulp.task('clean', function() {
 
 
 
-//copy images to dist/img
+//copy images to docs/img
 gulp.task('copyimages', function() {
 	return gulp.src('app/img/**/*.*')
 		.pipe(cache(imagemin()))
-		.pipe(gulp.dest('dist/img'));
+		.pipe(gulp.dest('docs/img'));
 });
 
-// copy fonts to dist/fonts
+// copy fonts to docs/fonts
 gulp.task('copyfonts', function() {
 	return gulp.src('app/fonts/**/*.*')
-		.pipe(gulp.dest('dist/fonts'));
+		.pipe(gulp.dest('docs/fonts'));
 });
 
-//copu html, css, js, change name and path with useref and copy to dist, all is minify
+//copu html, css, js, change name and path with useref and copy to docs, all is minify
 gulp.task('copyhtml', function() {
 	return gulp.src('app/*.html')
 		.pipe(useref())
@@ -96,7 +96,7 @@ gulp.task('copyhtml', function() {
 		}))
 		.pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', minifyCss()))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('docs'));
 });
 
 //
@@ -122,5 +122,5 @@ gulp.task('stylus-watch', ['stylus'], function(done) {
 gulp.task('compile', gulpsync.sync(['stylus', 'pug']));
 
 
-// build project in "dist map"
+// build project in "docs map"
 gulp.task('build', gulpsync.sync(['compile', 'clean', 'copyhtml', 'copyimages','copyfonts']));

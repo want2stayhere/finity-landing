@@ -867,9 +867,9 @@ button.swiper-pagination-bullet {
 }
 .logo {
   display: inline-block;
-  width: 103px;
-  height: 28px;
-  background: url("../img/t-logo.png") no-repeat;
+  width: 60px;
+  height: 60px;
+  background: url("../img/svg/f-logo.svg") center/cover no-repeat;
 }
 .page-header__nav {
   display: -webkit-box;
@@ -1789,9 +1789,9 @@ background #fff img {
 }
 .page-footer__logo {
   display: inline-block;
-  width: 94px;
-  height: 26px;
-  background: url("../img/logo.png") no-repeat;
+  width: 60px;
+  height: 60px;
+  background: url("../img/svg/f-logo.svg") center/cover no-repeat;
   margin-bottom: 11px;
 }
 .page-footer__txt {
@@ -2174,13 +2174,10 @@ background #fff img {
     margin-left: 0;
     position: absolute;
     right: 13px;
-    top: 13px;
+    top: 20px;
   }
   .page-footer-info__wrap {
     position: relative;
-  }
-  .logo {
-    margin: 7px 0 0;
   }
   .page-footer-info {
     padding: 40px 0;

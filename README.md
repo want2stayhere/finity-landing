@@ -1,4 +1,4 @@
-# GulpBlank
+# Finity-landing
 Project on Gulp with Pug, Stylus, autoprefixer, browser-sync and other
 
 Установка
